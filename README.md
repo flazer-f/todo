@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# ToDo List Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack ToDo application built with React, Node.js, Express, and MongoDB. It features secure user authentication, advanced task management, and a modern, responsive user interface.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **User Authentication**: Secure JWT-based login and registration.
+- **Task Management**: Create, read, update, and delete tasks easily.
+- **Search & Filter**: Find specific tasks using the search bar or filter by status.
+- **Sorting**: Organize tasks by name or status in both ascending and descending order.
+- **Responsive Design**: A sleek UI built with Tailwind CSS that works on all devices.
+- **Backend Validation**: Robust error handling and data validation on the server side.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- **React**: Modern component-based UI development.
+- **Vite**: Ultra-fast build tool and development server.
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+- **TypeScript**: Type safety for more reliable code.
 
-## Expanding the ESLint configuration
+### Backend
+- **Node.js & Express**: High-performance web server framework.
+- **MongoDB & Mongoose**: Flexible NoSQL database and object modeling.
+- **JWT (JSON Web Tokens)**: Secure stateless authentication.
+- **Bcryptjs**: Password hashing for enhanced security.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+- Node.js (v18 or higher)
+- MongoDB account or local installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd todo
+   ```
+
+2. **Setup the Backend**:
+   - Navigate to the `backend` directory:
+     ```bash
+     cd backend
+     ```
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Create a `.env` file and add your configurations:
+     ```env
+     MONGO_URI=your_mongodb_connection_string
+     JWT_SECRET=your_jwt_secret
+     PORT=5005
+     ```
+
+3. **Setup the Frontend**:
+   - Navigate to the `frontend` directory:
+     ```bash
+     cd ../frontend
+     ```
+   - Install dependencies:
+     ```bash
+     npm install
+     ```
+   - Create a `.env` file:
+     ```env
+     VITE_API_URL=http://localhost:5005/api
+     ```
+
+## 🏃 Running the Application
+
+You can run both the frontend and backend concurrently from the root directory:
+
+```bash
+cd ..
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🌐 Deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+This project is ready to be deployed on platforms like Netlify. See the `walkthrough.md` in the `brain` directory for detailed common deployment strategies.
+
+---
+
+Made with ❤️ by [Your Name/GitHub]
