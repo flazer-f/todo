@@ -2,7 +2,7 @@
 
 A full-stack ToDo application built with React, Node.js, Express, and MongoDB. It features secure user authentication, advanced task management, and a modern, responsive user interface.
 
-## 🚀 Features
+## Features
 
 - **User Authentication**: Secure JWT-based login and registration.
 - **Task Management**: Create, read, update, and delete tasks easily.
@@ -11,7 +11,7 @@ A full-stack ToDo application built with React, Node.js, Express, and MongoDB. I
 - **Responsive Design**: A sleek UI built with Tailwind CSS that works on all devices.
 - **Backend Validation**: Robust error handling and data validation on the server side.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React**: Modern component-based UI development.
@@ -25,7 +25,7 @@ A full-stack ToDo application built with React, Node.js, Express, and MongoDB. I
 - **JWT (JSON Web Tokens)**: Secure stateless authentication.
 - **Bcryptjs**: Password hashing for enhanced security.
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -69,7 +69,7 @@ A full-stack ToDo application built with React, Node.js, Express, and MongoDB. I
      VITE_API_URL=http://localhost:5005/api
      ```
 
-## 🏃 Running the Application
+## Running the Application
 
 You can run both the frontend and backend concurrently from the root directory:
 
@@ -80,10 +80,7 @@ npm run dev
 
 The application will be available at `http://localhost:5173`.
 
-## 🌐 Deployment
+## Deployment
 
 This project is ready to be deployed on platforms like Netlify. See the `walkthrough.md` in the `brain` directory for detailed common deployment strategies.
 
----
-
-Made with ❤️ by [Your Name/GitHub]
