@@ -28,7 +28,9 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5005;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/todoapp';
+const MONGO_URI = process.env.MONGO_URI ;
+// alternative db
+//  'mongodb://localhost:27017/todoapp'
 
 mongoose.connect(MONGO_URI)
   .then(() => {

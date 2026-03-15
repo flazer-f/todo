@@ -23,7 +23,7 @@ function AppContent() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="bg-indigo-600 text-white p-4 shadow-md flex justify-between items-center px-6">
-        <h1 className="text-2xl font-bold tracking-tight">Antigravity ToDo</h1>
+        <h1 className="text-2xl font-bold tracking-tight">ToDo List</h1>
         <div className="flex items-center gap-4">
           <span className="font-medium bg-indigo-500 px-3 py-1 rounded-full text-sm">Welcome, {user.username}!</span>
           <button
@@ -38,7 +38,7 @@ function AppContent() {
         <TodoList />
       </main>
       <footer className="p-4 bg-white border-t text-center text-gray-500 text-sm">
-        &copy; 2026 Antigravity ToDo App. All rights reserved.
+      test 111 2
       </footer>
     </div>
   );
