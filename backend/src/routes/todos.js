@@ -27,8 +27,10 @@ router.get('/', authMiddleware, async (req, res) => {
   if (status) filter.status = status;
   if (search) filter.title = { $regex: search, $options: 'i' };
   let sortObj = {};
-  if (sort === 'name') sortObj.title = 1;
-  if (sort === 'status') sortObj.status = 1;
+  if (sort === 'name_asc' || sort === 'name') sortObj.title = 1;
+  if (sort === 'name_desc') sortObj.title = -1;
+  if (sort === 'status_asc' || sort === 'status') sortObj.status = 1;
+  if (sort === 'status_desc') sortObj.status = -1;
   try {
     const todos = await Todo.find(filter).sort(sortObj);
     res.json(todos);
