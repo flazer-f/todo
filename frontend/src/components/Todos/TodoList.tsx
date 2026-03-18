@@ -98,7 +98,7 @@ const TodoList = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <div className="max-w-4xl mx-auto p-2 sm:p-6 " style={{width:"100%"}}>
       <h2 className="text-3xl font-bold mb-8 text-indigo-600 text-center">My Tasks</h2>
 
       {/* Form Section */}
@@ -115,25 +115,25 @@ const TodoList = () => {
       {/* Controls Section */}
       <div className="bg-white p-4 rounded-lg shadow-sm border mb-6 flex flex-wrap gap-4 items-end">
         <form onSubmit={handleSearch} className="flex-1 min-w-[200px]">
-          <label className="block text-sm text-gray-600 mb-1">Search Tasks</label>
+          <label className="block text-sm text-gray-600 mb-1 font-medium">Search Tasks</label>
           <div className="flex gap-2">
             <input 
               type="text" 
-              className="flex-1 px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-400"
+              className="flex-1 px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
               placeholder="Search by name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <button type="submit" className="bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-lg hover:bg-indigo-200 transition">
+            <button type="submit" className="bg-indigo-100 text-indigo-700 px-4 py-1.5 rounded-lg hover:bg-indigo-200 transition font-medium">
               Search
             </button>
           </div>
         </form>
 
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">Filter Status</label>
+        <div className="w-full sm:w-auto">
+          <label className="block text-sm text-gray-600 mb-1 font-medium">Filter Status</label>
           <select 
-            className="px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-400"
+            className="w-full px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
           >
@@ -143,10 +143,10 @@ const TodoList = () => {
           </select>
         </div>
 
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">Sort By</label>
+        <div className="w-full sm:w-auto">
+          <label className="block text-sm text-gray-600 mb-1 font-medium">Sort By</label>
           <select 
-            className="px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-400"
+            className="w-full px-3 py-1.5 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
           >
@@ -164,11 +164,11 @@ const TodoList = () => {
 
       {/* List Section */}
       {loading ? (
-        <div className="text-center py-10 text-gray-500 italic">Loading tasks...</div>
+        <div className="text-center py-10 text-gray-500 italic font-medium">Loading tasks...</div>
       ) : (
         <div className="space-y-3">
           {todos.length === 0 ? (
-            <p className="text-center py-10 text-gray-400">No tasks found. Add your first task!</p>
+            <p className="text-center py-10 text-gray-400 font-medium">No tasks found. Add your first task!</p>
           ) : (
             todos.map(todo => (
               <TodoItem 

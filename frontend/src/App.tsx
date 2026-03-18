@@ -34,8 +34,10 @@ function AppContent() {
           </button>
         </div>
       </header>
-      <main className="flex-grow py-8 px-4 overflow-y-auto">
-        <TodoList />
+      <main className="flex-grow py-8 px-4 sm:px-6 lg:px-8 overflow-y-auto">
+        <div className="max-w-4xl mx-auto">
+          <TodoList />
+        </div>
       </main>
       <footer className="p-4 bg-white border-t text-center text-gray-500 text-sm">
         test 111 2
