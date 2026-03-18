@@ -12,7 +12,7 @@ router.post('/', authMiddleware, async (req, res) => {
       user: req.userId,
       title,
       description,
-      status: status || 'Incomplete',
+      status: status,
     });
     res.status(201).json(todo);
   } catch (err) {
